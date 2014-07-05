@@ -13,8 +13,6 @@
     NSArray *descriptionFood;
     NSArray *fotoFood;
     NSArray *priceList;
-    NSInteger ind;
-    NSInteger indd;
     
 }
 

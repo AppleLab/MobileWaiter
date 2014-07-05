@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23C94E1E1967FDF9001065B9 /* Basket.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C94E1D1967FDF9001065B9 /* Basket.m */; };
 		49058FF519674D3D0076094E /* soupTableViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 49058FF419674D3D0076094E /* soupTableViewClass.m */; };
 		49058FF919674E960076094E /* perv-26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FF719674E960076094E /* perv-26.jpg */; };
 		49058FFA19674E960076094E /* recept-ukrainskogo-borshcha-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FF819674E960076094E /* recept-ukrainskogo-borshcha-1.jpg */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23C94E1C1967FDF9001065B9 /* Basket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Basket.h; path = ../Basket.h; sourceTree = "<group>"; };
+		23C94E1D1967FDF9001065B9 /* Basket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Basket.m; path = ../Basket.m; sourceTree = "<group>"; };
 		49058FF319674D3D0076094E /* soupTableViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soupTableViewClass.h; sourceTree = "<group>"; };
 		49058FF419674D3D0076094E /* soupTableViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = soupTableViewClass.m; sourceTree = "<group>"; };
 		49058FF719674E960076094E /* perv-26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "perv-26.jpg"; sourceTree = "<group>"; };
@@ -141,12 +144,14 @@
 				49A8786A19674C030084EA49 /* AppDelegate.h */,
 				49A8786B19674C030084EA49 /* AppDelegate.m */,
 				49A8786D19674C030084EA49 /* Main.storyboard */,
+				23C94E1C1967FDF9001065B9 /* Basket.h */,
+				23C94E1D1967FDF9001065B9 /* Basket.m */,
 				49058FF319674D3D0076094E /* soupTableViewClass.h */,
 				49058FF419674D3D0076094E /* soupTableViewClass.m */,
-				49A8787019674C030084EA49 /* ViewController.h */,
-				49A8787119674C030084EA49 /* ViewController.m */,
 				49058FFB19674ED90076094E /* drinkTableViewClass.h */,
 				49058FFC19674ED90076094E /* drinkTableViewClass.m */,
+				49A8787019674C030084EA49 /* ViewController.h */,
+				49A8787119674C030084EA49 /* ViewController.m */,
 				49A8787319674C030084EA49 /* Images.xcassets */,
 				49A8786219674C030084EA49 /* Supporting Files */,
 			);
@@ -288,6 +293,7 @@
 				49A8786C19674C030084EA49 /* AppDelegate.m in Sources */,
 				49A8786819674C030084EA49 /* main.m in Sources */,
 				49058FF519674D3D0076094E /* soupTableViewClass.m in Sources */,
+				23C94E1E1967FDF9001065B9 /* Basket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
