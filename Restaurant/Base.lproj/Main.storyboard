@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XDz-I0-bnp">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FGU-E2-7Ug">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="XDz-I0-bnp" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9Nb-Wf-nXt">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ehG-Dx-00h" kind="relationship" relationship="viewControllers" id="2Re-bF-i7n"/>
+                        <segue destination="wwi-J7-vsF" kind="relationship" relationship="viewControllers" id="66S-PK-iEU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TtK-pc-K7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-525" y="492"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="iTf-bg-8Wu">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ehG-Dx-00h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PXd-yD-VwX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Crk-BN-fKX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cmr-Oc-NlO" kind="relationship" relationship="rootViewController" id="xg5-PC-4cl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MnJ-rQ-d8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="146"/>
+        </scene>
+        <!--Soup Table View Class - Супчики-->
+        <scene sceneID="pHr-jI-3dB">
+            <objects>
+                <tableViewController id="cmr-Oc-NlO" customClass="soupTableViewClass" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZXT-dV-C1O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="cmr-Oc-NlO" id="EXa-5b-cTJ"/>
+                            <outlet property="delegate" destination="cmr-Oc-NlO" id="hKh-zl-Ej5"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Супчики" id="oO3-s9-yDl"/>
+                    <navigationItem key="navigationItem" id="MyJ-9Q-TeQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXu-fi-nwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="151"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="PvO-UV-MRi">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="wwi-J7-vsF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5zf-fp-y3S"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cCk-Rm-1NI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lb6-S2-kDG" kind="relationship" relationship="rootViewController" id="P7W-Uc-Z1H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="App-LV-gKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="950"/>
+        </scene>
+        <!--Drink Table View Class - Напитки-->
+        <scene sceneID="1Ih-uj-nhQ">
+            <objects>
+                <tableViewController id="Lb6-S2-kDG" customClass="drinkTableViewClass" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="79J-fa-agU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Lb6-S2-kDG" id="hRg-hx-pdh"/>
+                            <outlet property="delegate" destination="Lb6-S2-kDG" id="Ak9-ce-wY2"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Напитки" id="6t3-Pc-7W8"/>
+                    <navigationItem key="navigationItem" id="FHX-Cw-ivP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXT-Kx-SeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="950"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
