@@ -200,5 +200,9 @@
 }
 
 - (IBAction)delete:(id)sender {
+    NSArray * des;
+    NSIndexPath * ind = ;
 }
+
+
 @end
