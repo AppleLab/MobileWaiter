@@ -22,17 +22,19 @@
 {
     [super viewDidLoad];
     
-    data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик",@"Борщик", nil];
-    descriptionFoodCart = [NSArray arrayWithObjects:@"11",@"12",@"12", nil];
-    fotoFoodCart = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
-    priceListCart = [NSArray arrayWithObjects:@500,@300,@300,nil];
+    _data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик",@"Борщик", nil];
+    _descriptionFoodCart = [NSArray arrayWithObjects:@"11",@"12",@"12", nil];
+    _fotoFoodCart = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
+    _priceListCart = [NSArray arrayWithObjects:@500,@300,@300,nil];
+    
+    
     
 }
 
 - (void)awakeFromNib
 {
     expandedRowIndex = -1;
-    data = [NSMutableArray new];
+    _data = [NSMutableArray new];
     for (int i = 0; i < 1000; i++)
     {
         //[data addObject:[NSString stringWithFormat:@"Data cell %d", i]];
@@ -47,7 +49,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [data count] + (expandedRowIndex != -1 ? 1 : 0);
+    return [_data count] + (expandedRowIndex != -1 ? 1 : 0);
 }
 
 
@@ -55,7 +57,7 @@
 {
     NSInteger row = [indexPath row];
     NSInteger dataIndex = [self dataIndexForRowIndex:row];
-    NSString *dataObject = [data objectAtIndex:dataIndex];
+    NSString *dataObject = [_data objectAtIndex:dataIndex];
     
     BOOL expandedCell = expandedRowIndex != -1 && expandedRowIndex + 1 == row;
     
@@ -66,13 +68,13 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
         UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40 , 40)];
         UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(45, 0, 250, 30)];
-        if(data.count > indexPath.row){
-            [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row]]]];
+        if(_data.count > indexPath.row){
+            [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[_fotoFoodCart objectAtIndex:indexPath.row]]]];
             cellLabel.text = dataObject;
             [cell addSubview:cellImageView];
             [cell addSubview:cellLabel];
         }
-        sum = [Vi sumUp:(NSArray*)priceListCart];
+        sum = [Vi sumUp:(NSArray*)_priceListCart];
         _sumOfOrder.text = [NSString stringWithFormat:@"Сумма заказа: %d", sum];
         return cell;
     }
@@ -98,9 +100,9 @@
         [priceTextView setTextColor:[UIColor whiteColor]];
         
         
-        textView.text = [descriptionFoodCart objectAtIndex:indexPath.row - 1];
-        priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[priceListCart objectAtIndex:indexPath.row - 1]];
-        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row - 1]]];
+        textView.text = [_descriptionFoodCart objectAtIndex:indexPath.row - 1];
+        priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[_priceListCart objectAtIndex:indexPath.row - 1]];
+        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[_fotoFoodCart objectAtIndex:indexPath.row - 1]]];
         textView.selectable = NO;
         
         
@@ -113,7 +115,7 @@
         [cell addSubview:textView];
         [cell addSubview:priceTextView];
         [textView setTextColor:[UIColor whiteColor]];
-                
+        
         return cell;
     }
 }

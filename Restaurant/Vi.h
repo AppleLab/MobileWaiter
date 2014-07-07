@@ -10,14 +10,16 @@
 
 @interface Vi : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    NSArray * descriptionFoodCart;
-    NSArray * fotoFoodCart;
-    NSArray * priceListCart;
     
-    NSMutableArray *data;
     NSInteger expandedRowIndex;
     
 }
+@property NSInteger * num;
+@property NSMutableArray *data;
+@property NSArray * descriptionFoodCart;
+@property NSArray * fotoFoodCart;
+@property NSArray * priceListCart;
+
 @property (weak, nonatomic) IBOutlet UITableView *cartTable;
 @property (weak, nonatomic) IBOutlet UILabel *sumOfOrder;
 - (IBAction)finally:(id)sender;

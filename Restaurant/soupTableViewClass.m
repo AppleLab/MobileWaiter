@@ -7,6 +7,7 @@
 //
 
 #import "soupTableViewClass.h"
+#import "Vi.h"
 
 @interface soupTableViewClass ()
 {
@@ -29,7 +30,6 @@
     descriptionFood = [NSArray arrayWithObjects:@"Супчик вкусняшка из креветок",@"Популярнейшее слово парней из тусовки МДК, лучший способ вызвать буруг у особи женского пола.", nil];
     fotoFood = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
     priceList = [NSArray arrayWithObjects:@"500",@"300", nil];
-    
     
 }
 
@@ -126,7 +126,15 @@
 }
 
 -(IBAction)MyMethod:(id)sender{
-    NSLog(@"СУПЧИК ЗАКАЗАН");
+    NSString * descr = [descriptionFood objectAtIndex: expandedRowIndex];
+    NSString * foto = [fotoFood objectAtIndex: expandedRowIndex];
+    NSString * price = [priceList objectAtIndex: expandedRowIndex];
+    NSString * dat = [data objectAtIndex: expandedRowIndex];
+//    Vi *vii = [[Vi alloc] init];
+//    vii = [
+//    [vii.descriptionFoodCart objectAtIndex: vii.descriptionFoodCart.count]  = descr;
+    
+    NSLog(dat);
 }
 
 

@@ -14,4 +14,6 @@
     NSInteger expandedRowIndex;
 }
 
+-(IBAction)MyMethod:(id)sender;
+
 @end
