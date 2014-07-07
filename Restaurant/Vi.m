@@ -11,12 +11,8 @@
 
 @interface Vi ()
 {
-    NSArray *descriptionFoodCart;
-    NSArray *fotoFoodCart;
-    NSArray *priceListCart;
-    
+    int sum;
 }
-
 @end
 
 @implementation Vi
@@ -26,11 +22,10 @@
 {
     [super viewDidLoad];
     
-    data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик", nil];
-    descriptionFoodCart = [NSArray arrayWithObjects:@"11",@"12", nil];
-    fotoFoodCart = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
-    priceListCart = [NSArray arrayWithObjects:@"500",@"300", nil];
-    
+    data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик",@"Борщик", nil];
+    descriptionFoodCart = [NSArray arrayWithObjects:@"11",@"12",@"12", nil];
+    fotoFoodCart = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
+    priceListCart = [NSArray arrayWithObjects:@500,@300,@300,nil];
     
 }
 
@@ -66,15 +61,19 @@
     
     if (!expandedCell)
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"data"];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier"];
         if (!cell)
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"data"];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
         UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40 , 40)];
         UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(45, 0, 250, 30)];
-        [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row]]]];
-        cellLabel.text = dataObject;
-        [cell addSubview:cellImageView];
-        [cell addSubview:cellLabel];
+        if(data.count > indexPath.row){
+            [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row]]]];
+            cellLabel.text = dataObject;
+            [cell addSubview:cellImageView];
+            [cell addSubview:cellLabel];
+        }
+        sum = [Vi sumUp:(NSArray*)priceListCart];
+        _sumOfOrder.text = [NSString stringWithFormat:@"Сумма заказа: %d", sum];
         return cell;
     }
     else
@@ -85,10 +84,9 @@
         UIImageView *imageOutView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 260)];
         UITextView *textView = [[UITextView alloc]initWithFrame:CGRectMake(10, 20, 270, 220)];
         UITextView *priceTextView = [[UITextView alloc]initWithFrame:CGRectMake(10, 230, 180, 30)];
-        UIButton *buttonView = [[UIButton alloc]initWithFrame:CGRectMake(230, 230, 80, 30)];
         
         
-        
+    
         
         if (!cell)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"expanded"];
@@ -97,15 +95,12 @@
         imageOutView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
         textView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
         priceTextView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
-        [buttonView setTitleColor: [UIColor whiteColor] forState: UIControlStateNormal];
         [priceTextView setTextColor:[UIColor whiteColor]];
         
         
         textView.text = [descriptionFoodCart objectAtIndex:indexPath.row - 1];
         priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[priceListCart objectAtIndex:indexPath.row - 1]];
         imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row - 1]]];
-        NSString *string = @"Заказать";
-        [buttonView setTitle: string forState: UIControlStateNormal];
         textView.selectable = NO;
         
         
@@ -118,10 +113,7 @@
         [cell addSubview:textView];
         [cell addSubview:priceTextView];
         [textView setTextColor:[UIColor whiteColor]];
-        [cell addSubview:buttonView];
-        
-        
-        
+                
         return cell;
     }
 }
@@ -194,4 +186,17 @@
  }
  */
 
++ (int) sumUp: (NSArray*) mass {
+    int s = 0;
+    for (int i = 0; i < mass.count; i++) {
+        s += [[mass objectAtIndex: i]intValue];
+    }
+    return s;
+}
+
+- (IBAction)finally:(id)sender {
+}
+
+- (IBAction)delete:(id)sender {
+}
 @end
