@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2321A4EE196A73B90005D7EA /* Десерты.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2321A4E8196A73B80005D7EA /* Десерты.jpg */; };
+		2321A4EF196A73B90005D7EA /* Напитки.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2321A4E9196A73B80005D7EA /* Напитки.jpg */; };
+		2321A4F0196A73B90005D7EA /* Рыба.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2321A4EA196A73B80005D7EA /* Рыба.jpg */; };
+		2321A4F1196A73B90005D7EA /* Салаты.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2321A4EB196A73B80005D7EA /* Салаты.jpg */; };
+		2321A4F2196A73B90005D7EA /* Супы.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2321A4EC196A73B90005D7EA /* Супы.jpg */; };
+		2321A4F3196A73B90005D7EA /* Шашлык.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2321A4ED196A73B90005D7EA /* Шашлык.jpg */; };
 		23C94E1E1967FDF9001065B9 /* Basket.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C94E1D1967FDF9001065B9 /* Basket.m */; };
 		49058FF519674D3D0076094E /* soupTableViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 49058FF419674D3D0076094E /* soupTableViewClass.m */; };
 		49058FF919674E960076094E /* perv-26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FF719674E960076094E /* perv-26.jpg */; };
@@ -41,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2321A4E8196A73B80005D7EA /* Десерты.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Десерты.jpg"; path = "Фото для проекта/Десерты.jpg"; sourceTree = SOURCE_ROOT; };
+		2321A4E9196A73B80005D7EA /* Напитки.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Напитки.jpg"; path = "Фото для проекта/Напитки.jpg"; sourceTree = SOURCE_ROOT; };
+		2321A4EA196A73B80005D7EA /* Рыба.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Рыба.jpg"; path = "Фото для проекта/Рыба.jpg"; sourceTree = SOURCE_ROOT; };
+		2321A4EB196A73B80005D7EA /* Салаты.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Салаты.jpg"; path = "Фото для проекта/Салаты.jpg"; sourceTree = SOURCE_ROOT; };
+		2321A4EC196A73B90005D7EA /* Супы.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Супы.jpg"; path = "Фото для проекта/Супы.jpg"; sourceTree = SOURCE_ROOT; };
+		2321A4ED196A73B90005D7EA /* Шашлык.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Шашлык.jpg"; path = "Фото для проекта/Шашлык.jpg"; sourceTree = SOURCE_ROOT; };
 		23C94E1C1967FDF9001065B9 /* Basket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Basket.h; path = ../Basket.h; sourceTree = "<group>"; };
 		23C94E1D1967FDF9001065B9 /* Basket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Basket.m; path = ../Basket.m; sourceTree = "<group>"; };
 		49058FF319674D3D0076094E /* soupTableViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soupTableViewClass.h; sourceTree = "<group>"; };
@@ -161,6 +173,12 @@
 		49A8786219674C030084EA49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2321A4E8196A73B80005D7EA /* Десерты.jpg */,
+				2321A4E9196A73B80005D7EA /* Напитки.jpg */,
+				2321A4EA196A73B80005D7EA /* Рыба.jpg */,
+				2321A4EB196A73B80005D7EA /* Салаты.jpg */,
+				2321A4EC196A73B90005D7EA /* Супы.jpg */,
+				2321A4ED196A73B90005D7EA /* Шашлык.jpg */,
 				49A8786319674C030084EA49 /* Restaurant-Info.plist */,
 				49A8786419674C030084EA49 /* InfoPlist.strings */,
 				49A8786719674C030084EA49 /* main.m */,
@@ -266,10 +284,16 @@
 				49059000196750930076094E /* 47754-boyarp.JPG in Resources */,
 				49058FF919674E960076094E /* perv-26.jpg in Resources */,
 				49A8787419674C030084EA49 /* Images.xcassets in Resources */,
+				2321A4EF196A73B90005D7EA /* Напитки.jpg in Resources */,
 				49059001196750930076094E /* zhighulievskoie.jpg in Resources */,
+				2321A4F2196A73B90005D7EA /* Супы.jpg in Resources */,
 				49A8786619674C030084EA49 /* InfoPlist.strings in Resources */,
 				49058FFA19674E960076094E /* recept-ukrainskogo-borshcha-1.jpg in Resources */,
+				2321A4F1196A73B90005D7EA /* Салаты.jpg in Resources */,
+				2321A4F0196A73B90005D7EA /* Рыба.jpg in Resources */,
+				2321A4EE196A73B90005D7EA /* Десерты.jpg in Resources */,
 				49A8786F19674C030084EA49 /* Main.storyboard in Resources */,
+				2321A4F3196A73B90005D7EA /* Шашлык.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
