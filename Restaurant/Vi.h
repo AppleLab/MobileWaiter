@@ -14,11 +14,12 @@
     NSInteger expandedRowIndex;
     
 }
-@property int num;
-@property NSMutableArray *data;
-@property NSArray * descriptionFoodCart;
-@property NSArray * fotoFoodCart;
-@property NSArray * priceListCart;
+
+@property NSMutableArray *dataCart;
+@property NSMutableArray * descriptionFoodCart;
+@property NSMutableArray * fotoFoodCart;
+@property NSMutableArray * priceListCart;
+
 
 @property (weak, nonatomic) IBOutlet UITableView *cartTable;
 @property (weak, nonatomic) IBOutlet UILabel *sumOfOrder;

@@ -10,18 +10,25 @@
 
 @interface MySingleton : NSObject {
 
-    NSMutableArray *count;
     NSMutableArray *data;
     NSMutableArray *descriptionFood;
     NSMutableArray *fotoFood;
     NSMutableArray *priceList;
+    NSMutableArray *dataCart;
+    NSMutableArray *descriptionFoodCart;
+    NSMutableArray *fotoFoodCart;
+    NSMutableArray *priceListCart;
 }
 
-@property NSMutableArray *count;
 @property NSMutableArray *data;
 @property NSMutableArray *descriptionFood;
 @property NSMutableArray *fotoFood;
 @property NSMutableArray *priceList;
+@property NSMutableArray *dataCart;
+@property NSMutableArray *descriptionFoodCart;
+@property NSMutableArray *fotoFoodCart;
+@property NSMutableArray *priceListCart;
+
 
 + (MySingleton *)sharedInstance;
 

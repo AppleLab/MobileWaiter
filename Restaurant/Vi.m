@@ -8,9 +8,15 @@
 
 
 #import "Vi.h"
+#import "MySingleton.h"
 
 @interface Vi ()
 {
+    NSMutableArray *dataCart;
+    NSMutableArray * descriptionFoodCart;
+    NSMutableArray * fotoFoodCart;
+    NSMutableArray * priceListCart;
+    
     int sum;
     int r;
 }
@@ -23,11 +29,10 @@
 {
     [super viewDidLoad];
     
-    _data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик",@"Борщик", nil];
-    _descriptionFoodCart = [NSMutableArray arrayWithObjects:@"11",@"12",@"12", nil];
-    _fotoFoodCart = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
-    _priceListCart = [NSArray arrayWithObjects:@500,@300,@300,nil];
-    
+    dataCart = [MySingleton sharedInstance].dataCart;
+    descriptionFoodCart = [MySingleton sharedInstance].descriptionFoodCart;
+    fotoFoodCart = [MySingleton sharedInstance].fotoFoodCart;
+    priceListCart = [MySingleton sharedInstance].priceListCart;
     
     
 }
@@ -35,11 +40,6 @@
 - (void)awakeFromNib
 {
     expandedRowIndex = -1;
-    _data = [NSMutableArray new];
-    for (int i = 0; i < 1000; i++)
-    {
-        //[data addObject:[NSString stringWithFormat:@"Data cell %d", i]];
-    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -50,7 +50,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_data count] + (expandedRowIndex != -1 ? 1 : 0);
+    return [dataCart count] + (expandedRowIndex != -1 ? 1 : 0);
 }
 
 
@@ -58,7 +58,7 @@
 {
     NSInteger row = [indexPath row];
     NSInteger dataIndex = [self dataIndexForRowIndex:row];
-    NSString *dataObject = [_data objectAtIndex:dataIndex];
+    NSString *dataObject = [dataCart objectAtIndex:dataIndex];
     
     BOOL expandedCell = expandedRowIndex != -1 && expandedRowIndex + 1 == row;
     
@@ -69,13 +69,13 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
         UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40 , 40)];
         UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(45, 0, 250, 30)];
-        if(_data.count > indexPath.row){
-            [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[_fotoFoodCart objectAtIndex:indexPath.row]]]];
+        if(dataCart.count > indexPath.row){
+            [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row]]]];
             cellLabel.text = dataObject;
             [cell addSubview:cellImageView];
             [cell addSubview:cellLabel];
         }
-        sum = [Vi sumUp:(NSArray*)_priceListCart];
+        sum = [Vi sumUp:(NSArray*)priceListCart];
         _sumOfOrder.text = [NSString stringWithFormat:@"Сумма заказа: %d", sum];
         return cell;
     }
@@ -89,8 +89,6 @@
         UITextView *priceTextView = [[UITextView alloc]initWithFrame:CGRectMake(10, 230, 180, 30)];
         
         
-    
-        
         if (!cell)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"expanded"];
         
@@ -101,9 +99,9 @@
         [priceTextView setTextColor:[UIColor whiteColor]];
         
         
-        textView.text = [_descriptionFoodCart objectAtIndex:indexPath.row - 1];
-        priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[_priceListCart objectAtIndex:indexPath.row - 1]];
-        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[_fotoFoodCart objectAtIndex:indexPath.row - 1]]];
+        textView.text = [descriptionFoodCart objectAtIndex:indexPath.row - 1];
+        priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[priceListCart objectAtIndex:indexPath.row - 1]];
+        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row - 1]]];
         textView.selectable = NO;
         
         
@@ -197,12 +195,12 @@
     return s;
 }
 
-- (IBAction)finally:(id)sender {
-}
-
 - (IBAction)delete:(id)sender {
     NSArray * des;
+    
+    
     NSLog(@"%d", r);
+    
 }
 
 
