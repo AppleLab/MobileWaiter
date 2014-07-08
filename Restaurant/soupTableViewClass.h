@@ -10,8 +10,8 @@
 
 @interface soupTableViewClass : UITableViewController 
 {
-    NSMutableArray *data;
     NSInteger expandedRowIndex;
 }
+@property NSMutableArray *data;
 
 @end

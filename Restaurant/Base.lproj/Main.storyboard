@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XDz-I0-bnp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9xs-Zh-YYI">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="K4L-Yd-6FS">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="9xs-Zh-YYI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="COe-Z2-ddu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="W8m-Ux-QHZ">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="XDz-I0-bnp" kind="relationship" relationship="rootViewController" id="J1T-b1-Jew"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3K-VC-D26" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2344" y="1158"/>
+        </scene>
+        <!--Tab Bar Controller - Ресторан-->
         <scene sceneID="FGU-E2-7Ug">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="XDz-I0-bnp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Ресторан" id="jyC-am-JQ6"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9Nb-Wf-nXt">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ehG-Dx-00h" kind="relationship" relationship="viewControllers" id="2Re-bF-i7n"/>
-                        <segue destination="wwi-J7-vsF" kind="relationship" relationship="viewControllers" id="66S-PK-iEU"/>
+                        <segue destination="6TI-HY-NlU" kind="relationship" relationship="viewControllers" id="qRG-p3-t3X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TtK-pc-K7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-525" y="492"/>
+            <point key="canvasLocation" x="-1851" y="1158"/>
         </scene>
-        <!--Navigation Controller - Item-->
-        <scene sceneID="iTf-bg-8Wu">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="ehG-Dx-00h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PXd-yD-VwX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Crk-BN-fKX">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cmr-Oc-NlO" kind="relationship" relationship="rootViewController" id="xg5-PC-4cl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MnJ-rQ-d8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="424" y="146"/>
-        </scene>
-        <!--Soup Table View Class - Супчики-->
+        <!--Soup Table View Class-->
         <scene sceneID="pHr-jI-3dB">
             <objects>
                 <tableViewController id="cmr-Oc-NlO" customClass="soupTableViewClass" sceneMemberID="viewController">
@@ -53,53 +57,125 @@
                             <outlet property="delegate" destination="cmr-Oc-NlO" id="hKh-zl-Ej5"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Супчики" id="oO3-s9-yDl"/>
                     <navigationItem key="navigationItem" id="MyJ-9Q-TeQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXu-fi-nwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="151"/>
+            <point key="canvasLocation" x="-646" y="1158"/>
         </scene>
-        <!--Navigation Controller - Item-->
-        <scene sceneID="PvO-UV-MRi">
+        <!--View Controller - Меню-->
+        <scene sceneID="Xcw-xF-FyH">
             <objects>
-                <navigationController definesPresentationContext="YES" id="wwi-J7-vsF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5zf-fp-y3S"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cCk-Rm-1NI">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Lb6-S2-kDG" kind="relationship" relationship="rootViewController" id="P7W-Uc-Z1H"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="App-LV-gKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="424" y="950"/>
-        </scene>
-        <!--Drink Table View Class - Напитки-->
-        <scene sceneID="1Ih-uj-nhQ">
-            <objects>
-                <tableViewController id="Lb6-S2-kDG" customClass="drinkTableViewClass" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="79J-fa-agU">
+                <viewController id="6TI-HY-NlU" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l7X-su-ylW"/>
+                        <viewControllerLayoutGuide type="bottom" id="2W0-3i-s1d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Iz-6M-GRh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="Lb6-S2-kDG" id="hRg-hx-pdh"/>
-                            <outlet property="delegate" destination="Lb6-S2-kDG" id="Ak9-ce-wY2"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Напитки" id="6t3-Pc-7W8"/>
-                    <navigationItem key="navigationItem" id="FHX-Cw-ivP"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FXT-Kx-SeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcR-Py-Xqk">
+                                <rect key="frame" x="0.0" y="60" width="320" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="     Супы" backgroundImage="1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="soupButton:" destination="6TI-HY-NlU" eventType="touchUpInside" id="Yj0-ox-F1Q"/>
+                                    <segue destination="cmr-Oc-NlO" kind="push" id="EDJ-j2-LLx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EC-Ce-Z7F">
+                                <rect key="frame" x="0.0" y="136" width="320" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="     Салаты" backgroundImage="2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="salatButton:" destination="6TI-HY-NlU" eventType="touchUpInside" id="BSz-Dn-fNT"/>
+                                    <segue destination="cmr-Oc-NlO" kind="push" id="ovc-rZ-tHR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lQ-MW-LPo">
+                                <rect key="frame" x="0.0" y="214" width="320" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="     Рыба" backgroundImage="3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fishButton:" destination="6TI-HY-NlU" eventType="touchUpInside" id="Y5S-pI-hq9"/>
+                                    <segue destination="cmr-Oc-NlO" kind="push" id="Fe0-Bg-jHm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fON-c9-f4g">
+                                <rect key="frame" x="0.0" y="292" width="320" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="     Мясо" backgroundImage="4.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="meatButton:" destination="6TI-HY-NlU" eventType="touchUpInside" id="Kwp-y5-5oZ"/>
+                                    <segue destination="cmr-Oc-NlO" kind="push" id="G6l-Kl-9bi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-nZ-uK9">
+                                <rect key="frame" x="0.0" y="370" width="320" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="     Напитки" backgroundImage="5.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="drinkButton:" destination="6TI-HY-NlU" eventType="touchUpInside" id="kgN-ba-Q0r"/>
+                                    <segue destination="cmr-Oc-NlO" kind="push" id="4iu-wL-Le9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-wl-OZc">
+                                <rect key="frame" x="0.0" y="448" width="320" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="     Десерты" backgroundImage="6.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dessertButton:" destination="6TI-HY-NlU" eventType="touchUpInside" id="622-sG-854"/>
+                                    <segue destination="cmr-Oc-NlO" kind="push" id="jZe-aQ-GVh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Меню" id="uLd-iP-NqY"/>
+                    <navigationItem key="navigationItem" title="Меню" id="agL-Sz-vk0"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outletCollection property="buttons" destination="ZcR-Py-Xqk" id="dfY-ca-jt1"/>
+                        <outletCollection property="buttons" destination="2EC-Ce-Z7F" id="tiS-uq-GE0"/>
+                        <outletCollection property="buttons" destination="9lQ-MW-LPo" id="Fpp-Pi-6sY"/>
+                        <outletCollection property="buttons" destination="fON-c9-f4g" id="sXO-oN-n67"/>
+                        <outletCollection property="buttons" destination="cQm-nZ-uK9" id="K6P-ar-AG1"/>
+                        <outletCollection property="buttons" destination="QZd-wl-OZc" id="eG1-UA-1NJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MC-y8-KgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="950"/>
+            <point key="canvasLocation" x="-1305" y="1158"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.png" width="640" height="144"/>
+        <image name="2.png" width="640" height="144"/>
+        <image name="3.png" width="640" height="144"/>
+        <image name="4.png" width="640" height="144"/>
+        <image name="5.png" width="640" height="144"/>
+        <image name="6.png" width="640" height="144"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ovc-rZ-tHR"/>
+    </inferredMetricsTieBreakers>
 </document>

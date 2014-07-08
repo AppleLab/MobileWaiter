@@ -1,47 +1,44 @@
 //
-//  soupTableViewClass.m
+//  CartTableView.m
 //  Restaurant
 //
-//  Created by Марсель Хамидуллин on 05.07.14.
+//  Created by Марсель Хамидуллин on 07.07.14.
 //  Copyright (c) 2014 Марсель Хамидуллин. All rights reserved.
 //
 
-#import "soupTableViewClass.h"
+#import "CartTableView.h"
 #import "MySingleton.h"
 
-@interface soupTableViewClass ()
+@interface CartTableView ()
 {
-    NSMutableArray *descriptionFood;
-    NSMutableArray *fotoFood;
-    NSMutableArray *priceList;
-    
+    NSArray *descriptionFood;
+    NSArray *fotoFood;
+    NSArray *priceList;
+    NSInteger ind;
+    NSInteger indd;
 }
 
 @end
 
-@implementation soupTableViewClass
-
+@implementation CartTableView
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    _data = [[MySingleton sharedInstance] data];
-    descriptionFood = [[MySingleton sharedInstance] descriptionFood];
-    fotoFood = [[MySingleton sharedInstance] fotoFood];
-    priceList = [[MySingleton sharedInstance] priceList];
-    [self.navigationController.navigationItem setTitle:@"Меню"];
-    
-    
-    
-    
-    
+    MySingleton* sharedSingleton = [ MySingleton sharedInstance ];
+    data = sharedSingleton.count;
+    /*NSLog(@"%@",sharedSingleton.count);
+    descriptionFood = [NSArray arrayWithObjects: nil];
+    fotoFood = [NSArray arrayWithObjects: nil];
+    priceList = [NSArray arrayWithObjects: nil];
+    */
     
 }
 
 - (void)awakeFromNib
 {
     expandedRowIndex = -1;
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -52,15 +49,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_data count] + (expandedRowIndex != -1 ? 1 : 0);
+    return [data count] + (expandedRowIndex != -1 ? 1 : 0);
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
     NSInteger dataIndex = [self dataIndexForRowIndex:row];
-    NSString *dataObject = [_data objectAtIndex:dataIndex];
+    NSString *dataObject = [data objectAtIndex:dataIndex];
     
     BOOL expandedCell = expandedRowIndex != -1 && expandedRowIndex + 1 == row;
     
@@ -80,9 +76,11 @@
         [cell addSubview:cellImageView];
         [cell addSubview:cellLabel];
         [cell addSubview:cellLabelPrice];
-        
+        return cell;
         return cell;
     }
+    
+    
     else
     {
         
@@ -110,12 +108,9 @@
         textView.text = [descriptionFood objectAtIndex:indexPath.row - 1];
         priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[priceList objectAtIndex:indexPath.row - 1]];
         imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFood objectAtIndex:indexPath.row - 1]]];
-        NSString *string = @"Заказать";
-        [buttonView setTitle: string forState: UIControlStateNormal];
         textView.selectable = NO;
         
         
-        [buttonView addTarget:self action:@selector(MyMethod:) forControlEvents:UIControlEventTouchUpInside]; //устанавливаем обработчик для нажатия кнопки
         
         
         
@@ -132,9 +127,6 @@
     }
 }
 
--(IBAction)MyMethod:(id)sender{
-    [[MySingleton sharedInstance].count addObject:[NSString stringWithFormat:@"%@",_data]];
-}
 
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -190,5 +182,7 @@
     else
         return row;
 }
+
+
 
 @end

@@ -67,12 +67,17 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"data"];
         if (!cell)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"data"];
-        UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40 , 40)];
-        UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(45, 0, 250, 30)];
+        UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 10, 50 , 50)];
+        UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 15, 250, 30)];
+        UILabel *cellLabelPrice = [[UILabel alloc]initWithFrame:CGRectMake(240, 10, 320, 30)];
         [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFood objectAtIndex:indexPath.row]]]];
         cellLabel.text = dataObject;
+        [cellLabel setFont: [UIFont fontWithName:@"helvetica" size:13.0f]];
+        cellLabelPrice.text = [NSString stringWithFormat:@"%@ р.",[priceList objectAtIndex:indexPath.row]];
+        cellLabelPrice.textColor = [UIColor grayColor];
         [cell addSubview:cellImageView];
         [cell addSubview:cellLabel];
+        [cell addSubview:cellLabelPrice];
         return cell;
         return cell;
     }
@@ -172,7 +177,7 @@
     NSInteger row = [indexPath row];
     if (expandedRowIndex != -1 && row == expandedRowIndex + 1)
         return 260;
-    return 40;
+    return 60;
 }
 
 - (NSInteger)dataIndexForRowIndex:(NSInteger)row
