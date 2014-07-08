@@ -60,9 +60,6 @@
                                 <state key="normal" backgroundImage="Супы.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Lb6-S2-kDG" kind="push" id="Gyb-it-lB4"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXQ-Lo-dgu">
                                 <rect key="frame" x="20" y="221" width="122" height="76"/>
@@ -147,27 +144,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXu-fi-nwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="-3126"/>
-        </scene>
-        <!--Drink Table View Class - Напитки-->
-        <scene sceneID="1Ih-uj-nhQ">
-            <objects>
-                <tableViewController id="Lb6-S2-kDG" customClass="drinkTableViewClass" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="79J-fa-agU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="Lb6-S2-kDG" id="hRg-hx-pdh"/>
-                            <outlet property="delegate" destination="Lb6-S2-kDG" id="Ak9-ce-wY2"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Напитки" id="6t3-Pc-7W8"/>
-                    <navigationItem key="navigationItem" id="FHX-Cw-ivP"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FXT-Kx-SeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="655" y="-2424"/>
+            <point key="canvasLocation" x="655" y="-2454"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="l8B-uF-noE">

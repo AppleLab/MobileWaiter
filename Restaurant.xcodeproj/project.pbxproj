@@ -11,7 +11,6 @@
 		49058FF519674D3D0076094E /* soupTableViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 49058FF419674D3D0076094E /* soupTableViewClass.m */; };
 		49058FF919674E960076094E /* perv-26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FF719674E960076094E /* perv-26.jpg */; };
 		49058FFA19674E960076094E /* recept-ukrainskogo-borshcha-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FF819674E960076094E /* recept-ukrainskogo-borshcha-1.jpg */; };
-		49058FFD19674ED90076094E /* drinkTableViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 49058FFC19674ED90076094E /* drinkTableViewClass.m */; };
 		49059000196750930076094E /* 47754-boyarp.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 49058FFE196750930076094E /* 47754-boyarp.JPG */; };
 		49059001196750930076094E /* zhighulievskoie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FFF196750930076094E /* zhighulievskoie.jpg */; };
 		49A8785C19674C030084EA49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A8785B19674C030084EA49 /* Foundation.framework */; };
@@ -47,8 +46,6 @@
 		49058FF419674D3D0076094E /* soupTableViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = soupTableViewClass.m; sourceTree = "<group>"; };
 		49058FF719674E960076094E /* perv-26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "perv-26.jpg"; sourceTree = "<group>"; };
 		49058FF819674E960076094E /* recept-ukrainskogo-borshcha-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "recept-ukrainskogo-borshcha-1.jpg"; sourceTree = "<group>"; };
-		49058FFB19674ED90076094E /* drinkTableViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drinkTableViewClass.h; sourceTree = "<group>"; };
-		49058FFC19674ED90076094E /* drinkTableViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drinkTableViewClass.m; sourceTree = "<group>"; };
 		49058FFE196750930076094E /* 47754-boyarp.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "47754-boyarp.JPG"; sourceTree = "<group>"; };
 		49058FFF196750930076094E /* zhighulievskoie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhighulievskoie.jpg; sourceTree = "<group>"; };
 		49A8785819674C030084EA49 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,8 +145,6 @@
 				23BD31B5196A837B007C47FC /* Vi.m */,
 				49058FF319674D3D0076094E /* soupTableViewClass.h */,
 				49058FF419674D3D0076094E /* soupTableViewClass.m */,
-				49058FFB19674ED90076094E /* drinkTableViewClass.h */,
-				49058FFC19674ED90076094E /* drinkTableViewClass.m */,
 				49A8787019674C030084EA49 /* ViewController.h */,
 				49A8787119674C030084EA49 /* ViewController.m */,
 				49A8787319674C030084EA49 /* Images.xcassets */,
@@ -161,12 +156,6 @@
 		49A8786219674C030084EA49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2321A4E8196A73B80005D7EA /* Десерты.jpg */,
-				2321A4E9196A73B80005D7EA /* Напитки.jpg */,
-				2321A4EA196A73B80005D7EA /* Рыба.jpg */,
-				2321A4EB196A73B80005D7EA /* Салаты.jpg */,
-				2321A4EC196A73B90005D7EA /* Супы.jpg */,
-				2321A4ED196A73B90005D7EA /* Шашлык.jpg */,
 				49A8786319674C030084EA49 /* Restaurant-Info.plist */,
 				49A8786419674C030084EA49 /* InfoPlist.strings */,
 				49A8786719674C030084EA49 /* main.m */,
@@ -272,16 +261,10 @@
 				49059000196750930076094E /* 47754-boyarp.JPG in Resources */,
 				49058FF919674E960076094E /* perv-26.jpg in Resources */,
 				49A8787419674C030084EA49 /* Images.xcassets in Resources */,
-				2321A4EF196A73B90005D7EA /* Напитки.jpg in Resources */,
 				49059001196750930076094E /* zhighulievskoie.jpg in Resources */,
-				2321A4F2196A73B90005D7EA /* Супы.jpg in Resources */,
 				49A8786619674C030084EA49 /* InfoPlist.strings in Resources */,
 				49058FFA19674E960076094E /* recept-ukrainskogo-borshcha-1.jpg in Resources */,
-				2321A4F1196A73B90005D7EA /* Салаты.jpg in Resources */,
-				2321A4F0196A73B90005D7EA /* Рыба.jpg in Resources */,
-				2321A4EE196A73B90005D7EA /* Десерты.jpg in Resources */,
 				49A8786F19674C030084EA49 /* Main.storyboard in Resources */,
-				2321A4F3196A73B90005D7EA /* Шашлык.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BD31B6196A837B007C47FC /* Vi.m in Sources */,
-				49058FFD19674ED90076094E /* drinkTableViewClass.m in Sources */,
 				49A8787219674C030084EA49 /* ViewController.m in Sources */,
 				49A8786C19674C030084EA49 /* AppDelegate.m in Sources */,
 				49A8786819674C030084EA49 /* main.m in Sources */,
