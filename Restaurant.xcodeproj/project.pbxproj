@@ -19,7 +19,6 @@
 		496F172819687F6C00ED0F2A /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 496F172219687F6C00ED0F2A /* 4.png */; };
 		496F172919687F6C00ED0F2A /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 496F172319687F6C00ED0F2A /* 5.png */; };
 		496F172A19687F6C00ED0F2A /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 496F172419687F6C00ED0F2A /* 6.png */; };
-		497D5B7D196A8325000D1FD9 /* MySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 497D5B7C196A8325000D1FD9 /* MySingleton.m */; };
 		49A8785C19674C030084EA49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A8785B19674C030084EA49 /* Foundation.framework */; };
 		49A8785E19674C030084EA49 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A8785D19674C030084EA49 /* CoreGraphics.framework */; };
 		49A8786019674C030084EA49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A8785F19674C030084EA49 /* UIKit.framework */; };
@@ -61,8 +60,6 @@
 		496F172219687F6C00ED0F2A /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		496F172319687F6C00ED0F2A /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		496F172419687F6C00ED0F2A /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
-		497D5B7B196A8325000D1FD9 /* MySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
-		497D5B7C196A8325000D1FD9 /* MySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
 		49A8785819674C030084EA49 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A8785B19674C030084EA49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49A8785D19674C030084EA49 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,8 +163,6 @@
 				23BD31B5196A837B007C47FC /* Vi.m */,
 				49058FF319674D3D0076094E /* soupTableViewClass.h */,
 				49058FF419674D3D0076094E /* soupTableViewClass.m */,
-				497D5B7B196A8325000D1FD9 /* MySingleton.h */,
-				497D5B7C196A8325000D1FD9 /* MySingleton.m */,
 				49A8787019674C030084EA49 /* ViewController.h */,
 				49A8787119674C030084EA49 /* ViewController.m */,
 				49A8787319674C030084EA49 /* Images.xcassets */,
@@ -313,7 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BD31B6196A837B007C47FC /* Vi.m in Sources */,
-				497D5B7D196A8325000D1FD9 /* MySingleton.m in Sources */,
 				49A8787219674C030084EA49 /* ViewController.m in Sources */,
 				49A8786C19674C030084EA49 /* AppDelegate.m in Sources */,
 				49A8786819674C030084EA49 /* main.m in Sources */,

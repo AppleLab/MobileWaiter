@@ -7,13 +7,13 @@
 //
 
 #import "soupTableViewClass.h"
-#import "MySingleton.h"
+#import "Vi.h"
 
 @interface soupTableViewClass ()
 {
-    NSMutableArray *descriptionFood;
-    NSMutableArray *fotoFood;
-    NSMutableArray *priceList;
+    NSArray *descriptionFood;
+    NSArray *fotoFood;
+    NSArray *priceList;
     
 }
 
@@ -26,17 +26,21 @@
 {
     [super viewDidLoad];
     
-    _data = [[MySingleton sharedInstance] data];
-    descriptionFood = [[MySingleton sharedInstance] descriptionFood];
-    fotoFood = [[MySingleton sharedInstance] fotoFood];
-    priceList = [[MySingleton sharedInstance] priceList];
-    [self.navigationController.navigationItem setTitle:@"Меню"];
+    data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик", nil];
+    descriptionFood = [NSArray arrayWithObjects:@"Супчик вкусняшка из креветок",@"Популярнейшее слово парней из тусовки МДК, лучший способ вызвать буруг у особи женского пола.", nil];
+    fotoFood = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
+    priceList = [NSArray arrayWithObjects:@"500",@"300", nil];
     
 }
 
 - (void)awakeFromNib
 {
     expandedRowIndex = -1;
+    data = [NSMutableArray new];
+    for (int i = 0; i < 1000; i++)
+    {
+        //[data addObject:[NSString stringWithFormat:@"Data cell %d", i]];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -47,7 +51,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_data count] + (expandedRowIndex != -1 ? 1 : 0);
+    return [data count] + (expandedRowIndex != -1 ? 1 : 0);
 }
 
 
@@ -55,7 +59,7 @@
 {
     NSInteger row = [indexPath row];
     NSInteger dataIndex = [self dataIndexForRowIndex:row];
-    NSString *dataObject = [_data objectAtIndex:dataIndex];
+    NSString *dataObject = [data objectAtIndex:dataIndex];
     
     BOOL expandedCell = expandedRowIndex != -1 && expandedRowIndex + 1 == row;
     
@@ -64,18 +68,12 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"data"];
         if (!cell)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"data"];
-        UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 10, 50 , 50)];
-        UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 15, 250, 30)];
-        UILabel *cellLabelPrice = [[UILabel alloc]initWithFrame:CGRectMake(240, 10, 320, 30)];
+        UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40 , 40)];
+        UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(45, 0, 250, 30)];
         [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFood objectAtIndex:indexPath.row]]]];
         cellLabel.text = dataObject;
-        [cellLabel setFont: [UIFont fontWithName:@"helvetica" size:13.0f]];
-        cellLabelPrice.text = [NSString stringWithFormat:@"%@ р.",[priceList objectAtIndex:indexPath.row]];
-        cellLabelPrice.textColor = [UIColor grayColor];
         [cell addSubview:cellImageView];
         [cell addSubview:cellLabel];
-        [cell addSubview:cellLabelPrice];
-        
         return cell;
     }
     else
@@ -128,8 +126,9 @@
 }
 
 -(IBAction)MyMethod:(id)sender{
-    [[MySingleton sharedInstance].count addObject:[NSString stringWithFormat:@"%@",_data]];
+    NSLog(@"СУПЧИК ЗАКАЗАН");
 }
+
 
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -170,7 +169,7 @@
     NSInteger row = [indexPath row];
     if (expandedRowIndex != -1 && row == expandedRowIndex + 1)
         return 260;
-    return 60;
+    return 40;
 }
 
 - (NSInteger)dataIndexForRowIndex:(NSInteger)row
@@ -185,5 +184,8 @@
     else
         return row;
 }
+
+
+
 
 @end
