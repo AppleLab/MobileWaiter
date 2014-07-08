@@ -14,4 +14,6 @@
 }
 @property NSMutableArray *data;
 
+-(IBAction)MyMethod:(id)sender;
+
 @end
