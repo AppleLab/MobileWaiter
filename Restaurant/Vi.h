@@ -14,7 +14,7 @@
     NSInteger expandedRowIndex;
     
 }
-@property NSInteger * num;
+@property int num;
 @property NSMutableArray *data;
 @property NSArray * descriptionFoodCart;
 @property NSArray * fotoFoodCart;
@@ -22,7 +22,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *cartTable;
 @property (weak, nonatomic) IBOutlet UILabel *sumOfOrder;
-- (IBAction)finally:(id)sender;
 - (IBAction)delete:(id)sender;
 
 @end

@@ -12,6 +12,7 @@
 @interface Vi ()
 {
     int sum;
+    int r;
 }
 @end
 
@@ -23,7 +24,7 @@
     [super viewDidLoad];
     
     _data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик",@"Борщик", nil];
-    _descriptionFoodCart = [NSArray arrayWithObjects:@"11",@"12",@"12", nil];
+    _descriptionFoodCart = [NSMutableArray arrayWithObjects:@"11",@"12",@"12", nil];
     _fotoFoodCart = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
     _priceListCart = [NSArray arrayWithObjects:@500,@300,@300,nil];
     
@@ -151,7 +152,7 @@
         
     }
     [tableView endUpdates];
-    
+    r = row;
     return nil;
 }
 
@@ -201,7 +202,7 @@
 
 - (IBAction)delete:(id)sender {
     NSArray * des;
-    NSIndexPath * ind = ;
+    NSLog(@"%d", r);
 }
 
 

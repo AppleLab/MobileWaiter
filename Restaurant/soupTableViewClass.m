@@ -126,16 +126,9 @@
 }
 
 -(IBAction)MyMethod:(id)sender{
-    NSString * descr = [descriptionFood objectAtIndex: expandedRowIndex];
-    NSString * foto = [fotoFood objectAtIndex: expandedRowIndex];
-    NSString * price = [priceList objectAtIndex: expandedRowIndex];
-    NSString * dat = [data objectAtIndex: expandedRowIndex];
-//    Vi *vii = [[Vi alloc] init];
-//    vii = [
-//    [vii.descriptionFoodCart objectAtIndex: vii.descriptionFoodCart.count]  = descr;
-    
-    NSLog(dat);
+    NSLog(@"СУПЧИК ЗАКАЗАН");
 }
+
 
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
