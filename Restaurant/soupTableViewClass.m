@@ -7,13 +7,14 @@
 //
 
 #import "soupTableViewClass.h"
-#import "Vi.h"
+#import "MySingleton.h"
 
 @interface soupTableViewClass ()
 {
     NSArray *descriptionFood;
     NSArray *fotoFood;
     NSArray *priceList;
+    NSInteger * z;
     
 }
 
@@ -26,11 +27,11 @@
 {
     [super viewDidLoad];
     
-    data = [NSMutableArray arrayWithObjects:@"Суп из креветок",@"Борщик", nil];
-    descriptionFood = [NSArray arrayWithObjects:@"Супчик вкусняшка из креветок",@"Популярнейшее слово парней из тусовки МДК, лучший способ вызвать буруг у особи женского пола.", nil];
-    fotoFood = [NSArray arrayWithObjects:@"perv-26.jpg",@"recept-ukrainskogo-borshcha-1.jpg", nil];
-    priceList = [NSArray arrayWithObjects:@"500",@"300", nil];
-    
+    data = [[MySingleton sharedInstance]data];
+    descriptionFood = [[MySingleton sharedInstance]descriptionFood];
+    fotoFood = [[MySingleton sharedInstance]fotoFood];
+    priceList = [[MySingleton sharedInstance]priceList];
+    NSLog(@"%@",[MySingleton sharedInstance].dataCart);
 }
 
 - (void)awakeFromNib
@@ -126,8 +127,20 @@
 }
 
 -(IBAction)MyMethod:(id)sender{
+    CGPoint buttonPositions = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *path = [self.tableView indexPathForRowAtPoint: buttonPositions];
+    NSString *str = [NSString stringWithFormat: @"%@", [data objectAtIndex: (int)z]];
+    [[MySingleton sharedInstance].dataCart addObject: str];
+    [[MySingleton sharedInstance].fotoFoodCart addObject: [NSString stringWithFormat: @"%@", [fotoFood objectAtIndex: (int) z]]];
+    [[MySingleton sharedInstance].priceListCart addObject: [NSString stringWithFormat: @"%@", [priceList objectAtIndex:(int) z]]];
+    [[MySingleton sharedInstance].descriptionFoodCart addObject: [NSString stringWithFormat: @"%@", [descriptionFood objectAtIndex:(int) z]]];
     NSLog(@"СУПЧИК ЗАКАЗАН");
+    NSLog(@"%@", path);
+    NSLog(@"%d", (int) z);
+    
+    [self viewDidLoad];
 }
+
 
 
 
@@ -160,7 +173,7 @@
         
     }
     [tableView endUpdates];
-    
+    z = row;
     return nil;
 }
 
