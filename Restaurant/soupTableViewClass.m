@@ -128,10 +128,16 @@
 
 -(IBAction)MyMethod:(id)sender{
     CGPoint buttonPositions = [sender convertPoint:CGPointZero toView:self.tableView];
-    NSIndexPath *path = [self.tableView indexPathForRowAtPoint:buttonPositions];
-    NSLog(path);
-    //NSString *string = [NSString stringWithFormat:@"%@",_data[]];
-    //[[MySingleton sharedInstance].count addObject:string];
+    NSIndexPath *path = [self.tableView indexPathForRowAtPoint: buttonPositions];
+    NSString *str = [NSString stringWithFormat: @"%@", [data objectAtIndex: (int)z]];
+    [[MySingleton sharedInstance].dataCart addObject: str];
+    [[MySingleton sharedInstance].fotoFoodCart addObject: [NSString stringWithFormat: @"%@", [fotoFood objectAtIndex: (int) z]]];
+    [[MySingleton sharedInstance].priceListCart addObject: [NSString stringWithFormat: @"%@", [priceList objectAtIndex:(int) z]]];
+    [[MySingleton sharedInstance].descriptionFoodCart addObject: [NSString stringWithFormat: @"%@", [descriptionFood objectAtIndex:(int) z]]];
+    NSLog(@"СУПЧИК ЗАКАЗАН");
+    NSLog(@"%@", path);
+    NSLog(@"%d", (int) z);
+    
     [self viewDidLoad];
 }
 
