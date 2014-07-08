@@ -32,10 +32,6 @@
     priceList = [[MySingleton sharedInstance] priceList];
     [self.navigationController.navigationItem setTitle:@"Меню"];
     
-    
-    
-    
-    
 }
 
 - (void)awakeFromNib
@@ -134,7 +130,6 @@
 -(IBAction)MyMethod:(id)sender{
     [[MySingleton sharedInstance].count addObject:[NSString stringWithFormat:@"%@",_data]];
 }
-
 
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath

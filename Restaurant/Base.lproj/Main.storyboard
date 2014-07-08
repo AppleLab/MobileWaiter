@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9xs-Zh-YYI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9xs-Zh-YYI">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -61,7 +61,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXu-fi-nwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="1158"/>
+            <point key="canvasLocation" x="-422" y="818"/>
         </scene>
         <!--View Controller - Меню-->
         <scene sceneID="Xcw-xF-FyH">
@@ -160,6 +160,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MC-y8-KgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1305" y="1158"/>
+        </scene>
+        <!--Navigation Controller - Меню-->
+        <scene sceneID="xxN-vE-u3j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RAI-t2-42C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Меню" id="3I8-IP-UA5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mLU-Sy-Ge9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNy-n2-I1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-702" y="-1657"/>
+        </scene>
+        <!--Navigation Controller - Отзывы-->
+        <scene sceneID="hlR-pS-EJh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="txt-VG-m6a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Отзывы" id="bFO-9K-d61"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zvG-lt-Kcu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlD-TI-Fha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1232" y="1863"/>
         </scene>
     </scenes>
     <resources>
