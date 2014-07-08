@@ -128,7 +128,12 @@
 }
 
 -(IBAction)MyMethod:(id)sender{
-    [[MySingleton sharedInstance].count addObject:[NSString stringWithFormat:@"%@",_data]];
+    CGPoint buttonPositions = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *path = [self.tableView indexPathForRowAtPoint:buttonPositions];
+    NSLog(path);
+    //NSString *string = [NSString stringWithFormat:@"%@",_data[]];
+    //[[MySingleton sharedInstance].count addObject:string];
+    [self viewDidLoad];
 }
 
 

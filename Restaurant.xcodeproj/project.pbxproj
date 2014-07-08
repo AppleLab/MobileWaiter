@@ -13,6 +13,24 @@
 		49058FFA19674E960076094E /* recept-ukrainskogo-borshcha-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FF819674E960076094E /* recept-ukrainskogo-borshcha-1.jpg */; };
 		49059000196750930076094E /* 47754-boyarp.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 49058FFE196750930076094E /* 47754-boyarp.JPG */; };
 		49059001196750930076094E /* zhighulievskoie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49058FFF196750930076094E /* zhighulievskoie.jpg */; };
+		49698A6F196C0DD6001D7540 /* Аперол Спритц.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A5D196C0DD6001D7540 /* Аперол Спритц.jpg */; };
+		49698A70196C0DD6001D7540 /* Коул-слоу с крабом.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A5E196C0DD6001D7540 /* Коул-слоу с крабом.jpg */; };
+		49698A71196C0DD6001D7540 /* Мартини Рояле.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A5F196C0DD6001D7540 /* Мартини Рояле.jpg */; };
+		49698A72196C0DD6001D7540 /* Мусс из манго, маракуйи и сливок.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A60196C0DD6001D7540 /* Мусс из манго, маракуйи и сливок.jpg */; };
+		49698A73196C0DD6001D7540 /* ньюйорк стейк.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A61196C0DD6001D7540 /* ньюйорк стейк.jpg */; };
+		49698A74196C0DD6001D7540 /* Португальский лимонад с лаймом и виноградом.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A62196C0DD6001D7540 /* Португальский лимонад с лаймом и виноградом.jpg */; };
+		49698A75196C0DD6001D7540 /* Рыбный суп с филе лосося и дорада.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A63196C0DD6001D7540 /* Рыбный суп с филе лосося и дорада.jpg */; };
+		49698A76196C0DD6001D7540 /* Салат «Нью Йорк».jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A64196C0DD6001D7540 /* Салат «Нью Йорк».jpg */; };
+		49698A77196C0DD6001D7540 /* Салат «Флорида».jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A65196C0DD6001D7540 /* Салат «Флорида».jpg */; };
+		49698A78196C0DD6001D7540 /* Стейк из лосося.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A66196C0DD6001D7540 /* Стейк из лосося.jpg */; };
+		49698A79196C0DD6001D7540 /* Стейк из чилийского сибаса.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A67196C0DD6001D7540 /* Стейк из чилийского сибаса.jpg */; };
+		49698A7A196C0DD6001D7540 /* Суп из белых грибов и шампиньонов со сливками.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A68196C0DD6001D7540 /* Суп из белых грибов и шампиньонов со сливками.jpg */; };
+		49698A7B196C0DD6001D7540 /* Суп с телятиной и картофелем.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A69196C0DD6001D7540 /* Суп с телятиной и картофелем.jpg */; };
+		49698A7C196C0DD6001D7540 /* Теплый яблочный пирог.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A6A196C0DD6001D7540 /* Теплый яблочный пирог.jpg */; };
+		49698A7D196C0DD6001D7540 /* Тигровые креветки .jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A6B196C0DD6001D7540 /* Тигровые креветки .jpg */; };
+		49698A7E196C0DD6001D7540 /* Филе-Миньон.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A6C196C0DD6001D7540 /* Филе-Миньон.jpg */; };
+		49698A7F196C0DD6001D7540 /* Филе-Шато.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A6D196C0DD6001D7540 /* Филе-Шато.jpg */; };
+		49698A80196C0DD6001D7540 /* Чизкейк «Нью-Йорк».jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49698A6E196C0DD6001D7540 /* Чизкейк «Нью-Йорк».jpg */; };
 		496F172519687F6C00ED0F2A /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 496F171F19687F6C00ED0F2A /* 1.png */; };
 		496F172619687F6C00ED0F2A /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 496F172019687F6C00ED0F2A /* 2.png */; };
 		496F172719687F6C00ED0F2A /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 496F172119687F6C00ED0F2A /* 3.png */; };
@@ -55,6 +73,24 @@
 		49058FF819674E960076094E /* recept-ukrainskogo-borshcha-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "recept-ukrainskogo-borshcha-1.jpg"; sourceTree = "<group>"; };
 		49058FFE196750930076094E /* 47754-boyarp.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "47754-boyarp.JPG"; sourceTree = "<group>"; };
 		49058FFF196750930076094E /* zhighulievskoie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhighulievskoie.jpg; sourceTree = "<group>"; };
+		49698A5D196C0DD6001D7540 /* Аперол Спритц.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Аперол Спритц.jpg"; sourceTree = "<group>"; };
+		49698A5E196C0DD6001D7540 /* Коул-слоу с крабом.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Коул-слоу с крабом.jpg"; sourceTree = "<group>"; };
+		49698A5F196C0DD6001D7540 /* Мартини Рояле.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Мартини Рояле.jpg"; sourceTree = "<group>"; };
+		49698A60196C0DD6001D7540 /* Мусс из манго, маракуйи и сливок.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Мусс из манго, маракуйи и сливок.jpg"; sourceTree = "<group>"; };
+		49698A61196C0DD6001D7540 /* ньюйорк стейк.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ньюйорк стейк.jpg"; sourceTree = "<group>"; };
+		49698A62196C0DD6001D7540 /* Португальский лимонад с лаймом и виноградом.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Португальский лимонад с лаймом и виноградом.jpg"; sourceTree = "<group>"; };
+		49698A63196C0DD6001D7540 /* Рыбный суп с филе лосося и дорада.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Рыбный суп с филе лосося и дорада.jpg"; sourceTree = "<group>"; };
+		49698A64196C0DD6001D7540 /* Салат «Нью Йорк».jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Салат «Нью Йорк».jpg"; sourceTree = "<group>"; };
+		49698A65196C0DD6001D7540 /* Салат «Флорида».jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Салат «Флорида».jpg"; sourceTree = "<group>"; };
+		49698A66196C0DD6001D7540 /* Стейк из лосося.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Стейк из лосося.jpg"; sourceTree = "<group>"; };
+		49698A67196C0DD6001D7540 /* Стейк из чилийского сибаса.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Стейк из чилийского сибаса.jpg"; sourceTree = "<group>"; };
+		49698A68196C0DD6001D7540 /* Суп из белых грибов и шампиньонов со сливками.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Суп из белых грибов и шампиньонов со сливками.jpg"; sourceTree = "<group>"; };
+		49698A69196C0DD6001D7540 /* Суп с телятиной и картофелем.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Суп с телятиной и картофелем.jpg"; sourceTree = "<group>"; };
+		49698A6A196C0DD6001D7540 /* Теплый яблочный пирог.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Теплый яблочный пирог.jpg"; sourceTree = "<group>"; };
+		49698A6B196C0DD6001D7540 /* Тигровые креветки .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Тигровые креветки .jpg"; sourceTree = "<group>"; };
+		49698A6C196C0DD6001D7540 /* Филе-Миньон.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Филе-Миньон.jpg"; sourceTree = "<group>"; };
+		49698A6D196C0DD6001D7540 /* Филе-Шато.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Филе-Шато.jpg"; sourceTree = "<group>"; };
+		49698A6E196C0DD6001D7540 /* Чизкейк «Нью-Йорк».jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Чизкейк «Нью-Йорк».jpg"; sourceTree = "<group>"; };
 		496F171F19687F6C00ED0F2A /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		496F172019687F6C00ED0F2A /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		496F172119687F6C00ED0F2A /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -111,6 +147,24 @@
 		49058FF619674E960076094E /* res */ = {
 			isa = PBXGroup;
 			children = (
+				49698A5D196C0DD6001D7540 /* Аперол Спритц.jpg */,
+				49698A5E196C0DD6001D7540 /* Коул-слоу с крабом.jpg */,
+				49698A5F196C0DD6001D7540 /* Мартини Рояле.jpg */,
+				49698A60196C0DD6001D7540 /* Мусс из манго, маракуйи и сливок.jpg */,
+				49698A61196C0DD6001D7540 /* ньюйорк стейк.jpg */,
+				49698A62196C0DD6001D7540 /* Португальский лимонад с лаймом и виноградом.jpg */,
+				49698A63196C0DD6001D7540 /* Рыбный суп с филе лосося и дорада.jpg */,
+				49698A64196C0DD6001D7540 /* Салат «Нью Йорк».jpg */,
+				49698A65196C0DD6001D7540 /* Салат «Флорида».jpg */,
+				49698A66196C0DD6001D7540 /* Стейк из лосося.jpg */,
+				49698A67196C0DD6001D7540 /* Стейк из чилийского сибаса.jpg */,
+				49698A68196C0DD6001D7540 /* Суп из белых грибов и шампиньонов со сливками.jpg */,
+				49698A69196C0DD6001D7540 /* Суп с телятиной и картофелем.jpg */,
+				49698A6A196C0DD6001D7540 /* Теплый яблочный пирог.jpg */,
+				49698A6B196C0DD6001D7540 /* Тигровые креветки .jpg */,
+				49698A6C196C0DD6001D7540 /* Филе-Миньон.jpg */,
+				49698A6D196C0DD6001D7540 /* Филе-Шато.jpg */,
+				49698A6E196C0DD6001D7540 /* Чизкейк «Нью-Йорк».jpg */,
 				496F171F19687F6C00ED0F2A /* 1.png */,
 				496F172019687F6C00ED0F2A /* 2.png */,
 				496F172119687F6C00ED0F2A /* 3.png */,
@@ -283,17 +337,35 @@
 			files = (
 				496F172819687F6C00ED0F2A /* 4.png in Resources */,
 				49059000196750930076094E /* 47754-boyarp.JPG in Resources */,
+				49698A70196C0DD6001D7540 /* Коул-слоу с крабом.jpg in Resources */,
+				49698A7B196C0DD6001D7540 /* Суп с телятиной и картофелем.jpg in Resources */,
+				49698A74196C0DD6001D7540 /* Португальский лимонад с лаймом и виноградом.jpg in Resources */,
 				496F172519687F6C00ED0F2A /* 1.png in Resources */,
 				49058FF919674E960076094E /* perv-26.jpg in Resources */,
 				49A8787419674C030084EA49 /* Images.xcassets in Resources */,
+				49698A7D196C0DD6001D7540 /* Тигровые креветки .jpg in Resources */,
 				49059001196750930076094E /* zhighulievskoie.jpg in Resources */,
 				496F172A19687F6C00ED0F2A /* 6.png in Resources */,
+				49698A75196C0DD6001D7540 /* Рыбный суп с филе лосося и дорада.jpg in Resources */,
+				49698A71196C0DD6001D7540 /* Мартини Рояле.jpg in Resources */,
+				49698A6F196C0DD6001D7540 /* Аперол Спритц.jpg in Resources */,
 				496F172719687F6C00ED0F2A /* 3.png in Resources */,
+				49698A7C196C0DD6001D7540 /* Теплый яблочный пирог.jpg in Resources */,
+				49698A80196C0DD6001D7540 /* Чизкейк «Нью-Йорк».jpg in Resources */,
+				49698A7A196C0DD6001D7540 /* Суп из белых грибов и шампиньонов со сливками.jpg in Resources */,
+				49698A73196C0DD6001D7540 /* ньюйорк стейк.jpg in Resources */,
+				49698A78196C0DD6001D7540 /* Стейк из лосося.jpg in Resources */,
 				49A8786619674C030084EA49 /* InfoPlist.strings in Resources */,
+				49698A76196C0DD6001D7540 /* Салат «Нью Йорк».jpg in Resources */,
 				496F172619687F6C00ED0F2A /* 2.png in Resources */,
+				49698A7E196C0DD6001D7540 /* Филе-Миньон.jpg in Resources */,
+				49698A77196C0DD6001D7540 /* Салат «Флорида».jpg in Resources */,
+				49698A72196C0DD6001D7540 /* Мусс из манго, маракуйи и сливок.jpg in Resources */,
 				496F172919687F6C00ED0F2A /* 5.png in Resources */,
 				49058FFA19674E960076094E /* recept-ukrainskogo-borshcha-1.jpg in Resources */,
+				49698A79196C0DD6001D7540 /* Стейк из чилийского сибаса.jpg in Resources */,
 				49A8786F19674C030084EA49 /* Main.storyboard in Resources */,
+				49698A7F196C0DD6001D7540 /* Филе-Шато.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
