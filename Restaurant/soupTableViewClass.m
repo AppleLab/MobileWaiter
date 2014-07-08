@@ -127,17 +127,16 @@
 }
 
 -(IBAction)MyMethod:(id)sender{
-    CGPoint buttonPositions = [sender convertPoint:CGPointZero toView:self.tableView];
-    NSIndexPath *path = [self.tableView indexPathForRowAtPoint: buttonPositions];
-    NSString *str = [NSString stringWithFormat: @"%@", [data objectAtIndex: (int)z]];
+//    CGPoint buttonPositions = [sender convertPoint:CGPointZero toView:self.tableView];
+//    NSIndexPath *path = [self.tableView indexPathForRowAtPoint: buttonPositions];
+    NSString *str = [NSString stringWithFormat: @"%@", data [(int)z]];
     [[MySingleton sharedInstance].dataCart addObject: str];
-    [[MySingleton sharedInstance].fotoFoodCart addObject: [NSString stringWithFormat: @"%@", [fotoFood objectAtIndex: (int) z]]];
-    [[MySingleton sharedInstance].priceListCart addObject: [NSString stringWithFormat: @"%@", [priceList objectAtIndex:(int) z]]];
-    [[MySingleton sharedInstance].descriptionFoodCart addObject: [NSString stringWithFormat: @"%@", [descriptionFood objectAtIndex:(int) z]]];
+    [[MySingleton sharedInstance].fotoFoodCart addObject: [NSString stringWithFormat: @"%@", fotoFood[(int) z]]];
+    [[MySingleton sharedInstance].priceListCart addObject: [NSString stringWithFormat: @"%@", priceList [(int)z]]];
+    [[MySingleton sharedInstance].descriptionFoodCart addObject: [NSString stringWithFormat: @"%@", descriptionFood[(int)z]]];
     NSLog(@"СУПЧИК ЗАКАЗАН");
-    NSLog(@"%@", path);
-    NSLog(@"%d", (int) z);
     
+    NSLog(@"%d", [MySingleton sharedInstance].dataCart.count);
     [self viewDidLoad];
 }
 
@@ -173,7 +172,7 @@
         
     }
     [tableView endUpdates];
-    z = row;
+    z = (int*)row;
     return nil;
 }
 

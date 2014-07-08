@@ -29,7 +29,6 @@
 @property NSMutableArray *fotoFoodCart;
 @property NSMutableArray *priceListCart;
 
-
 + (MySingleton *)sharedInstance;
 
 @end

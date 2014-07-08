@@ -12,10 +12,10 @@
 
 @interface Vi ()
 {
-    NSMutableArray *dataCart;
-    NSMutableArray * descriptionFoodCart;
-    NSMutableArray * fotoFoodCart;
-    NSMutableArray * priceListCart;
+//    NSMutableArray *dataCart;
+//    NSMutableArray * descriptionFoodCart;
+//    NSMutableArray * fotoFoodCart;
+//    NSMutableArray * priceListCart;
     
     int sum;
     int r;
@@ -28,14 +28,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    dataCart = [MySingleton sharedInstance].dataCart;
-    descriptionFoodCart = [MySingleton sharedInstance].descriptionFoodCart;
-    fotoFoodCart = [MySingleton sharedInstance].fotoFoodCart;
-    priceListCart = [MySingleton sharedInstance].priceListCart;
-    
+//    dataCart = [MySingleton sharedInstance].dataCart;
+//    descriptionFoodCart = [MySingleton sharedInstance].descriptionFoodCart;
+//    fotoFoodCart = [MySingleton sharedInstance].fotoFoodCart;
+//    priceListCart = [MySingleton sharedInstance].priceListCart;
+//
     
 }
+
+//-(void) viewWillAppear:(BOOL)animated{
+//    [self viewWillAppear:animated];
+//    [self.tableView reloadData];
+//}
 
 - (void)awakeFromNib
 {
@@ -50,7 +54,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [dataCart count] + (expandedRowIndex != -1 ? 1 : 0);
+    return [[MySingleton sharedInstance].dataCart count] + (expandedRowIndex != -1 ? 1 : 0);
 }
 
 
@@ -58,7 +62,7 @@
 {
     NSInteger row = [indexPath row];
     NSInteger dataIndex = [self dataIndexForRowIndex:row];
-    NSString *dataObject = [dataCart objectAtIndex:dataIndex];
+    NSString *dataObject = [[MySingleton sharedInstance].dataCart objectAtIndex:dataIndex];
     
     BOOL expandedCell = expandedRowIndex != -1 && expandedRowIndex + 1 == row;
     
@@ -69,13 +73,13 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
         UIImageView *cellImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40 , 40)];
         UILabel *cellLabel = [[UILabel alloc]initWithFrame:CGRectMake(45, 0, 250, 30)];
-        if(dataCart.count > indexPath.row){
-            [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row]]]];
+        if([MySingleton sharedInstance].dataCart.count > indexPath.row){
+            [cellImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[[MySingleton sharedInstance].fotoFoodCart objectAtIndex:indexPath.row]]]];
             cellLabel.text = dataObject;
             [cell addSubview:cellImageView];
             [cell addSubview:cellLabel];
         }
-        sum = [Vi sumUp:(NSArray*)priceListCart];
+        sum = [Vi sumUp:(NSArray*)[MySingleton sharedInstance].priceListCart];
         _sumOfOrder.text = [NSString stringWithFormat:@"Сумма заказа: %d", sum];
         return cell;
     }
@@ -99,9 +103,9 @@
         [priceTextView setTextColor:[UIColor whiteColor]];
         
         
-        textView.text = [descriptionFoodCart objectAtIndex:indexPath.row - 1];
-        priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[priceListCart objectAtIndex:indexPath.row - 1]];
-        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[fotoFoodCart objectAtIndex:indexPath.row - 1]]];
+        textView.text = [[MySingleton sharedInstance].descriptionFoodCart objectAtIndex:indexPath.row - 1];
+        priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[[MySingleton sharedInstance].priceListCart objectAtIndex:indexPath.row - 1]];
+        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[[MySingleton sharedInstance].fotoFoodCart objectAtIndex:indexPath.row - 1]]];
         textView.selectable = NO;
         
         
@@ -196,7 +200,7 @@
 }
 
 - (IBAction)delete:(id)sender {
-    NSArray * des;
+//    NSArray * des;
     
     
     NSLog(@"%d", r);

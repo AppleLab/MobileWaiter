@@ -15,6 +15,7 @@ static MySingleton *_sharedInstance;
 @synthesize fotoFood;
 @synthesize descriptionFood;
 @synthesize priceList;
+
 @synthesize dataCart;
 @synthesize fotoFoodCart;
 @synthesize descriptionFoodCart;
