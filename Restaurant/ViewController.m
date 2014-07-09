@@ -35,8 +35,6 @@
 
 
 - (IBAction)soupButton:(id)sender {
-    
-    //NSLog(@"Нажата кнопка: %lu",(unsigned long)[self.buttons indexOfObject:sender]);
     [MySingleton sharedInstance].data = [NSMutableArray arrayWithObjects:
                                          @"Рыбный суп с филе лосося",
                                          @"Суп с телятиной",

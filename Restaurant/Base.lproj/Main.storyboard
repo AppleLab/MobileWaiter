@@ -146,7 +146,7 @@
                     <navigationItem key="navigationItem" id="VXf-PD-0BL"/>
                     <connections>
                         <outlet property="sumOfOrder" destination="mLY-Wh-8sE" id="O8k-Hw-r24"/>
-                        <outlet property="tableView" destination="Mro-P0-tXV" id="z0M-Vc-liH"/>
+                        <outlet property="tableView" destination="Mro-P0-tXV" id="OzC-Dm-aSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQ8-B6-DB0" userLabel="First Responder" sceneMemberID="firstResponder"/>

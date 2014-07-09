@@ -12,13 +12,7 @@
 
 @interface Vi ()
 {
-//    NSMutableArray *dataCart;
-//    NSMutableArray * descriptionFoodCart;
-//    NSMutableArray * fotoFoodCart;
-//    NSMutableArray * priceListCart;
-    
     int sum;
-    int r;
 }
 @end
 
@@ -27,19 +21,16 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-//    dataCart = [MySingleton sharedInstance].dataCart;
-//    descriptionFoodCart = [MySingleton sharedInstance].descriptionFoodCart;
-//    fotoFoodCart = [MySingleton sharedInstance].fotoFoodCart;
-//    priceListCart = [MySingleton sharedInstance].priceListCart;
-//
+//    [super viewDidLoad];
     
 }
 
-//-(void) viewWillAppear:(BOOL)animated{
-//    [self viewWillAppear:animated];
-//    [self.tableView reloadData];
-//}
+-(void) viewWillAppear:(BOOL)animated{
+        [self.tableView reloadData];
+    sum = [Vi sumUp:(NSMutableArray*)[MySingleton sharedInstance].priceListCart];
+    _sumOfOrder.text = [NSString stringWithFormat:@"Сумма заказа: %d", sum];
+    
+}
 
 - (void)awakeFromNib
 {
@@ -79,8 +70,9 @@
             [cell addSubview:cellImageView];
             [cell addSubview:cellLabel];
         }
-        sum = [Vi sumUp:(NSArray*)[MySingleton sharedInstance].priceListCart];
-        _sumOfOrder.text = [NSString stringWithFormat:@"Сумма заказа: %d", sum];
+        
+        
+         NSLog(@"%@", _sumOfOrder.text);
         return cell;
     }
     else
@@ -92,10 +84,8 @@
         UITextView *textView = [[UITextView alloc]initWithFrame:CGRectMake(10, 20, 270, 220)];
         UITextView *priceTextView = [[UITextView alloc]initWithFrame:CGRectMake(10, 230, 180, 30)];
         
-        
         if (!cell)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"expanded"];
-        
         
         imageOutView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
         textView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
@@ -107,10 +97,6 @@
         priceTextView.text =[NSString stringWithFormat:@"Цена: %@ рублей",[[MySingleton sharedInstance].priceListCart objectAtIndex:indexPath.row - 1]];
         imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",[[MySingleton sharedInstance].fotoFoodCart objectAtIndex:indexPath.row - 1]]];
         textView.selectable = NO;
-        
-        
-        //        [buttonView addTarget:self action:@selector(MyMethod:) forControlEvents:UIControlEventTouchUpInside]; //устанавливаем обработчик для нажатия кнопки
-        
         
         
         [cell addSubview:imageView];
@@ -154,7 +140,6 @@
         
     }
     [tableView endUpdates];
-    r = row;
     return nil;
 }
 
@@ -200,12 +185,20 @@
 }
 
 - (IBAction)delete:(id)sender {
-//    NSArray * des;
+    CGPoint buttonposition = [sender convertPoint: CGPointZero toView: self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: buttonposition];
+    NSInteger price = [[MySingleton sharedInstance].priceListCart[(int)indexPath.row]intValue];
+    [[MySingleton sharedInstance].dataCart removeObjectAtIndex:indexPath.row];
+    [[MySingleton sharedInstance].descriptionFoodCart removeObjectAtIndex:indexPath.row];
+    [[MySingleton sharedInstance].fotoFoodCart removeObjectAtIndex:indexPath.row];
+    [[MySingleton sharedInstance].priceListCart removeObjectAtIndex:indexPath.row];
+    sum -= price;
     
-    
-    NSLog(@"%d", r);
-    
+    if ([MySingleton sharedInstance].dataCart.count == 0)
+        expandedRowIndex = -1;
+    _sumOfOrder.text = [NSString stringWithFormat:@"Сумма заказа: %d", sum];
+    [self.tableView reloadData];
+    NSLog(@"%ld", (long)indexPath.row);
 }
-
 
 @end

@@ -21,7 +21,6 @@ static MySingleton *_sharedInstance;
 @synthesize descriptionFoodCart;
 @synthesize priceListCart;
 
-
 -(id)init
 {
     self = [super init];

@@ -15,5 +15,6 @@
 }
 
 -(IBAction)MyMethod:(id)sender;
+-(IBAction)stepper:(id)sender;
 
 @end

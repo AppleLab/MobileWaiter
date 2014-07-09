@@ -89,7 +89,6 @@
         
         
         
-        
         if (!cell)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"expanded"];
         
@@ -112,7 +111,6 @@
         [buttonView addTarget:self action:@selector(MyMethod:) forControlEvents:UIControlEventTouchUpInside]; //устанавливаем обработчик для нажатия кнопки
         
         
-        
         [cell addSubview:imageView];
         [cell addSubview:imageOutView];
         [cell addSubview:textView];
@@ -121,10 +119,14 @@
         [cell addSubview:buttonView];
         
         
-        
         return cell;
     }
 }
+
+-(IBAction)stepper:(id)sender {
+    
+}
+
 
 -(IBAction)MyMethod:(id)sender{
 //    CGPoint buttonPositions = [sender convertPoint:CGPointZero toView:self.tableView];
